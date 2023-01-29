@@ -39,7 +39,7 @@ ${license}
 
 ### Contributing Authors
 
-${collabs}
+${authors}
 
 ${third_party}
 
