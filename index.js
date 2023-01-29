@@ -1,6 +1,6 @@
 const inq = require('inquirer');
 const fs = require('fs');
-const lic = require('license');
+const lic = require('./license');
 const { default: Choice } = require('inquirer/lib/objects/choice');
 const { default: Choices } = require('inquirer/lib/objects/choices');
 
