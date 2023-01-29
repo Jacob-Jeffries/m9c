@@ -57,43 +57,43 @@ inq
   .prompt([
     {
       type: 'input',
-      name: 'title',
       message: 'Please enter the title of your project:',
+      name: 'title',
     },
     {
       type: 'input',
-      name: 'description',
       message: 'Please enter a general description of your project:',
+      name: 'description',
     },
     {
       type: 'input',
-      name: 'install',
       message: 'Please enter the general installation guidlines for your project',
+      name: 'install',
     },
     {
       type: 'input',
-      name: 'usage',
       message: 'Please describe how to use your project once installed:',
+      name: 'usage',
     },
     {
       type: 'input',
-      name: 'screenshot',
       message: 'Please enter the url for a screenshot (./images/screenshot):',
+      name: 'screenshot',
     },
     {
       type: 'input',
-      name: 'alt_text',
       message: 'Please enter alternative text for your screenshot:',
+      name: 'alt_text',
     },
     {
       type: 'input',
-      name: 'video_link',
       message: 'Please enter the complete URL for a video link that shows your project in action:',
+      name: 'video_link',
     },
     {
       type: 'checkbox',
-      name: 'license',
       message: 'Please select the license that youd like to use.',
+      name: 'license',
       choices: ['MIT', 'GLWTPL'],
       validate(answer) {
         if(answer.length < 1){
@@ -105,33 +105,34 @@ inq
     },
     {
       type: 'input',
-      name: 'authors',
       message: 'Please enter the names of all the authors or contributors:',
+      name: 'authors',
     },
     {
       type: 'input',
-      name: 'third_party',
       message: 'Please enter the names of any third-party utilities used in yout project:',
+
+      name: 'third_party',
     },
     {
       type: 'input',
-      name: 'test',
       message: 'Please enter any relevant test instructions:',
+      name: 'test',
     },
     {
       type: 'input',
+      message: 'Please enter your GitHub username:',
       name: 'gh_user',
-      message: 'Please enter your GitHub username:'
     },
     {
       type: 'input',
-      name: 'gh_profile',
       message: 'Please enter the URL or your GitHub profile:',
+      name: 'gh_profile',
     },
     {
       type: 'input',
-      name: 'email',
       message: 'Please enter an email for users to submit questions:',
+      name: 'email',
     },
   ])
   .then((response) => {
