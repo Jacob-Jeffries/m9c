@@ -1,0 +1,23 @@
+{
+  "name": "m9c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacob-Jeffries/m9c.git"
+  },
+  "keywords": [],
+  "author": "Jacob Jeffries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jacob-Jeffries/m9c/issues"
+  },
+  "homepage": "https://github.com/Jacob-Jeffries/m9c#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
