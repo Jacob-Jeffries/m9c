@@ -58,37 +58,37 @@ inq
     {
       type: 'input',
       message: 'Please enter the title of your project:',
-      name: 'title',
+      name: 'title'
     },
     {
       type: 'input',
       message: 'Please enter a general description of your project:',
-      name: 'description',
+      name: 'description'
     },
     {
       type: 'input',
       message: 'Please enter the general installation guidlines for your project',
-      name: 'install',
+      name: 'install'
     },
     {
       type: 'input',
       message: 'Please describe how to use your project once installed:',
-      name: 'usage',
+      name: 'usage'
     },
     {
       type: 'input',
       message: 'Please enter the url for a screenshot (./images/screenshot):',
-      name: 'screenshot',
+      name: 'screenshot'
     },
     {
       type: 'input',
       message: 'Please enter alternative text for your screenshot:',
-      name: 'alt_text',
+      name: 'alt_text'
     },
     {
       type: 'input',
       message: 'Please enter the complete URL for a video link that shows your project in action:',
-      name: 'video_link',
+      name: 'video_link'
     },
     {
       type: 'checkbox',
@@ -106,33 +106,32 @@ inq
     {
       type: 'input',
       message: 'Please enter the names of all the authors or contributors:',
-      name: 'authors',
+      name: 'authors'
     },
     {
       type: 'input',
       message: 'Please enter the names of any third-party utilities used in yout project:',
-
-      name: 'third_party',
+      name: 'third_party'
     },
     {
       type: 'input',
       message: 'Please enter any relevant test instructions:',
-      name: 'test',
+      name: 'test'
     },
     {
       type: 'input',
       message: 'Please enter your GitHub username:',
-      name: 'gh_user',
+      name: 'gh_user'
     },
     {
       type: 'input',
       message: 'Please enter the URL or your GitHub profile:',
-      name: 'gh_profile',
+      name: 'gh_profile'
     },
     {
       type: 'input',
       message: 'Please enter an email for users to submit questions:',
-      name: 'email',
+      name: 'email'
     },
   ])
   .then((response) => {
