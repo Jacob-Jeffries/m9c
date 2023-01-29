@@ -10,7 +10,7 @@ const generate_README = ({}) =>
 
 ## Description
 
-${gen_desc}
+${description}
 
 ## Table of Contents
 
@@ -52,3 +52,29 @@ ${tests}
 -GitHub Username: ${gh_user}
 -GitHub Profile: ${gh_profile}
 -Email Address: ${email}`;
+
+inq
+  .prompt([
+    {
+      type: 'input',
+      name: 'title',
+      message: 'Please enter the title of your project:',
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'PLease enter a general description of your project:',
+    },
+    {
+      type: 'input',
+      name: 'install',
+      message: 'Please enter the general installation guidlines for your project',
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Please describe how to use your project once installed:',
+    },
+    
+  ]
+  );
