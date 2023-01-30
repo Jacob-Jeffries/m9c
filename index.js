@@ -42,9 +42,11 @@ ${license[0]}
 
 ## Credits
 
-### Contributing Authors
+### Contributing Authors:
 
 ${authors}
+
+### Third-Party Apps & Plugins:
 
 ${third_party}
 
@@ -54,114 +56,118 @@ ${test}
 
 ## Questions
 
--GitHub Username: ${gh_user}
+Please submit questions through one of the following options:
 
--GitHub Profile: ${gh_profile}
+*GitHub Username: ${gh_user}
 
--Email Address: ${email}`;
+*GitHub Profile: ${gh_profile}
 
-inq
-  .prompt([
-    {
-      type: 'input',
-      message: 'Please enter the title of your project:',
-      name: 'title'
-    },
-    {
-      type: 'input',
-      message: 'Please enter a general description of your project:',
-      name: 'description'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the general installation guidlines for your project',
-      name: 'install'
-    },
-    {
-      type: 'input',
-      message: 'Please describe how to use your project once installed:',
-      name: 'usage'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the url for a screenshot, for example ./images/screenshot :',
-      name: 'screenshot'
-    },
-    {
-      type: 'input',
-      message: 'Please enter alternative text for your screenshot:',
-      name: 'alt_text'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the complete URL for a video link that shows your project in action:',
-      name: 'video_link'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the year of copyright:',
-      name: 'year'
-    },
-    {
-      type: 'checkbox',
-      message: 'Please select the license that youd like to use.',
-      name: 'license',
-      choices: ['MIT', 'GLWTPL'],
-      validate(answer) {
-        if(answer.length < 1){
-          return 'You must choose a license type.'
-        }else{
-          return true;
-        }
+*Email Address: ${email}`;
+
+function main(){
+  inq
+    .prompt([
+      {
+        type: 'input',
+        message: 'Please enter the title of your project:',
+        name: 'title'
       },
-    },
-    {
-      type: 'input',
-      message: 'Please enter the names of all the authors or contributors:',
-      name: 'authors'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the names of any third-party utilities used in yout project:',
-      name: 'third_party'
-    },
-    {
-      type: 'input',
-      message: 'Please enter any relevant test instructions:',
-      name: 'test'
-    },
-    {
-      type: 'input',
-      message: 'Please enter your GitHub username:',
-      name: 'gh_user'
-    },
-    {
-      type: 'input',
-      message: 'Please enter the URL or your GitHub profile:',
-      name: 'gh_profile'
-    },
-    {
-      type: 'input',
-      message: 'Please enter an email for users to submit questions:',
-      name: 'email'
-    },
-  ])
-.then((response) => {
-  console.log(response);
+      {
+        type: 'input',
+        message: 'Please enter a general description of your project:',
+        name: 'description'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the general installation guidlines for your project',
+        name: 'install'
+      },
+      {
+        type: 'input',
+        message: 'Please describe how to use your project once installed:',
+        name: 'usage'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the URL for a screenshot, for example ./images/screenshot :',
+        name: 'screenshot'
+      },
+      {
+        type: 'input',
+        message: 'Please enter alternative text for your screenshot:',
+        name: 'alt_text'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the complete URL for a video link that shows your project in action:',
+        name: 'video_link'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the year of copyright:',
+        name: 'year'
+      },
+      {
+        type: 'checkbox',
+        message: 'Please select the license that youd like to use.',
+        name: 'license',
+        choices: ['MIT', 'GLWTPL'],
+        validate(answer) {
+          if(answer.length < 1){
+            return 'You must choose a license type.'
+          }else{
+            return true;
+          }
+        },
+      },
+      {
+        type: 'input',
+        message: 'Please enter the names of all the authors or contributors:',
+        name: 'authors'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the names of any third-party utilities used in yout project:',
+        name: 'third_party'
+      },
+      {
+        type: 'input',
+        message: 'Please enter any relevant test instructions:',
+        name: 'test'
+      },
+      {
+        type: 'input',
+        message: 'Please enter your GitHub username:',
+        name: 'gh_user'
+      },
+      {
+        type: 'input',
+        message: 'Please enter the URL or your GitHub profile:',
+        name: 'gh_profile'
+      },
+      {
+        type: 'input',
+        message: 'Please enter an email for users to submit questions:',
+        name: 'email'
+      },
+    ])
+  .then((response) => {
+    console.log(response);
 
-  let license = generate_license(response);
-  // console.log(license);
+    let license = generate_license(response);
+    // console.log(license);
 
-  const { title, description, install, usage, alt_text, screenshot, video_link, authors, third_party, test, gh_user, gh_profile, email } = response;
+    const { title, description, install, usage, alt_text, screenshot, video_link, authors, third_party, test, gh_user, gh_profile, email } = response;
 
-  const README_content = generate_README(title, description, install, usage, alt_text, screenshot, video_link, license, authors, third_party, test, gh_user, gh_profile, email);
+    const README_content = generate_README(title, description, install, usage, alt_text, screenshot, video_link, license, authors, third_party, test, gh_user, gh_profile, email);
 
-  // console.log(README_content);
+    // console.log(README_content);
 
-  fs.writeFile('README.md', README_content, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md file!')
-  );
-});
+    fs.writeFile('README.md', README_content, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md file!')
+    );
+  });
+};
 
 function generate_license({year, license: lic, authors}){
   let MIT = 
@@ -216,3 +222,5 @@ function generate_license({year, license: lic, authors}){
       console.log("FML");
   }
 }
+
+main();
