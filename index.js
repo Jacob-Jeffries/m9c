@@ -12,13 +12,17 @@ ${description}
 
 ## Table of Contents
 
--[Installation](#isntallation)
+*[Installation](#isntallation)
 
--[Usage](#usage)
+*[Usage](#usage)
 
--[Credits](#credits)
+*[License](#license)
 
--[License](#license)
+*[Credits](#credits)
+
+*[Tests](#tests)
+
+*[Questions](#questions)
 
 ## Installation
 
