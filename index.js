@@ -12,17 +12,12 @@ ${description}
 
 ## Table of Contents
 
-*[Installation](#isntallation)
-
-*[Usage](#usage)
-
-*[License](#license)
-
-*[Credits](#credits)
-
-*[Tests](#tests)
-
-*[Questions](#questions)
+* [Installation](#isntallation)
+* [Usage](#usage)
+* [License](#license)
+* [Credits](#credits)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 
@@ -58,11 +53,9 @@ ${test}
 
 Please submit questions through one of the following options:
 
-*GitHub Username: ${gh_user}
-
-*GitHub Profile: ${gh_profile}
-
-*Email Address: ${email}`;
+* GitHub Username: ${gh_user}
+* GitHub Profile: ${gh_profile}
+* Email Address: ${email}`;
 
 function main(){
   inq
