@@ -51,7 +51,9 @@ ${test}
 ## Questions
 
 -GitHub Username: ${gh_user}
+
 -GitHub Profile: ${gh_profile}
+
 -Email Address: ${email}`;
 
 inq
@@ -150,7 +152,7 @@ inq
 
   const README_content = generate_README(title, description, install, usage, alt_text, screenshot, video_link, license, authors, third_party, test, gh_user, gh_profile, email);
 
-  console.log(README_content);
+  // console.log(README_content);
 
   fs.writeFile('README.md', README_content, (err) =>
     err ? console.log(err) : console.log('Successfully created README.md file!')
